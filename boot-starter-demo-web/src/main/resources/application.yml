@@ -1,0 +1,12 @@
+spring:
+    datasource:
+        url: jdbc:mysql://123.57.162.168:3306/newlife?useSSL=false
+        username: root
+        password: ibmsun
+        driver-class-name: com.mysql.cj.jdbc.Driver
+    jpa:
+        show-sql: true
+server:
+    port: 8080
+    servlet:
+        context-path: /springboot

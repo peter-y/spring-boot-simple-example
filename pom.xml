@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <description>springboot构建示例,顶级工程</description>
+    <groupId>spring-boot-simple</groupId>
+    <artifactId>spring-boot-simple</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>boot-starter-demo-web</module>
+        <module>boot-starter-demo-service</module>
+        <module>boot-starter-demo-repository</module>
+        <module>boot-starter-demo-entity</module>
+        <module>boot-starter-demo-api</module>
+    </modules>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.4.RELEASE</version>
+    </parent>
+    <properties>
+        <demo.project.version>1.0-SNAPSHOT</demo.project.version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <!-- 引入子工程是为了方便控制引入版本 -->
+            <dependency>
+                <groupId>spring-boot-simple</groupId>
+                <artifactId>boot-starter-demo-web</artifactId>
+                <version>${demo.project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>spring-boot-simple</groupId>
+                <artifactId>boot-starter-demo-service</artifactId>
+                <version>${demo.project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>spring-boot-simple</groupId>
+                <artifactId>boot-starter-demo-repository</artifactId>
+                <version>${demo.project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>spring-boot-simple</groupId>
+                <artifactId>boot-starter-demo-entity</artifactId>
+                <version>${demo.project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>spring-boot-simple</groupId>
+                <artifactId>boot-starter-demo-api</artifactId>
+                <version>${demo.project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>8.0.12</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>26.0-jre</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
